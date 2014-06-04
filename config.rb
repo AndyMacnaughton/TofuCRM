@@ -2,10 +2,10 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "public/css"
+css_dir = "app/assets/stylesheets"
 sass_dir = "sass"
-images_dir = "public/images"
-javascripts_dir = "public/js"
+images_dir = "app/assets/images"
+javascripts_dir = "app/assets/javascripts"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
@@ -14,7 +14,7 @@ javascripts_dir = "public/js"
 # relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-# line_comments = false
+line_comments = false
 
 
 # If you prefer the indented syntax, you might want to regenerate this
