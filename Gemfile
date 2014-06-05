@@ -36,6 +36,7 @@ gem 'slim-rails'
 
 gem 'pg'
 gem 'unicorn'
+gem 'bcrypt'
 
 group :production, :staging do
     gem 'rails_12factor'
