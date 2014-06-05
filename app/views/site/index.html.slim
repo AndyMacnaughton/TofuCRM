@@ -1,0 +1,16 @@
+aside
+  nav
+    ul
+      - if current_user
+
+        li
+          a href=dashboard_path Dashboard
+        li
+          a href=logout_path Logout
+
+      - else
+
+        li
+          a href=login_path Login
+        li
+          a href=register_path Register

@@ -2,11 +2,14 @@ body
   .container
     header
       ul class="left"
-        h1 Tofu
+        a href=root_url
+          h1 Tofu
 
       ul class="right"
         a href="#"
-          h3 John Smith
+          h3
+            ' Hi
+            = current_username
 
     aside
       nav
