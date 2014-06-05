@@ -35,6 +35,7 @@ gem 'spring',        group: :development
 gem 'slim-rails'
 
 gem 'pg'
+gem 'unicorn'
 
 group :production, :staging do
     gem 'rails_12factor'
