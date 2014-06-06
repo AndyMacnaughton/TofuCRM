@@ -1,7 +1,5 @@
-
 <div class="wrapper">
-  <%= form_for @user do |f| %>
-  <h1>Sign Up</h1>
+  <%= form_for @user, :url => password_reset_path(params[:id]) do |f| %>
     <% if @user.errors.any? %>
       <div class="error_messages">
         <h2>Form is invalid</h2>
@@ -13,20 +11,11 @@
       </div>
     <% end %>
     <div class="field">
-      <%= f.text_field :email, :placeholder => "Email" %>
-    </div>
-    <div class="field">
-      <%= f.text_field :forename , :placeholder => "Forename" %>
-    </div>
-    <div class="field">
-      <%= f.text_field :surname , :placeholder => "Surname"%>
-    </div>
-    <div class="field">
-      <%= f.password_field :password , :placeholder => "Password"%>
+      <%= f.password_field :password, :placeholder => "Password" %>
     </div>
     <div class="field">
       <%= f.password_field :password_confirmation, :placeholder => "Password Confirmation" %>
     </div>
-    <div class="actions"><%= f.submit %></div>
+    <div class="actions"><%= f.submit "Update Password" %></div>
   <% end %>
 </div>
