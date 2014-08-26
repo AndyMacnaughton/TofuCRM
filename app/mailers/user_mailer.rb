@@ -1,4 +1,5 @@
 class UserMailer < ActionMailer::Base
+  default from: 'tofu.com'
 
   def password_reset(user)
     @user = user
