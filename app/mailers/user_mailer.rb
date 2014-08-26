@@ -3,7 +3,6 @@ class UserMailer < ActionMailer::Base
 
   def password_reset(user)
     @user = user
-    @url  = root_url
 
     mail(
       to: @user.email,
@@ -13,7 +12,7 @@ class UserMailer < ActionMailer::Base
 
   def welcome(user)
     @user = user
-    @url  = root_url
+    @url  = login_url
 
     mail(
       to: @user.email,
