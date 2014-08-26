@@ -11,21 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605233924) do
+ActiveRecord::Schema.define(version: 20140826191132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "users", force: true do |t|
-    t.string   "email"
-    t.string   "password_digest"
-    t.string   "forename"
-    t.string   "surname"
+  create_table "subscriptions", force: true do |t|
+    t.string   "name",       limit: 50, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email",                  limit: 50,  null: false
+    t.integer  "subscription_id",                    null: false
+    t.string   "password_digest",                    null: false
+    t.string   "forename",               limit: 100, null: false
+    t.string   "surname",                limit: 100, null: false
+    t.string   "auth_token"
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
-    t.string   "auth_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

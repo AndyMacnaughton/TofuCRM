@@ -1,14 +1,23 @@
 
- development:
-    adapter: postgresql
-    username: Andy
-    host: localhost
-    encoding: UTF8
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
 
 development:
   <<: *default
-  database: Andy
+  database: tofu_development
+  host: localhost
+  port: 5432
 
 test:
   <<: *default
-  database: db/test.postgresql
+  database: tofu_test
+  host: localhost
+  port: 5432
+
+production:
+  <<: *default
+  database: tofu_production
+  username: tofu
+  password: <%= ENV['FOS_DATABASE_PASSWORD'] %>

@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    meta content='text/html; charset=UTF8' http-equiv='Content-Type'
+
+  body
+
+    h2
+      ' Welcome
+      = @user.forename
+
+    p You are now a registered user of Tofu
+
+    p
+      ' Your username is:
+      = @user.email
+
+    p
+      ' You can log in
+      a href=@url here
+
+    p YAY

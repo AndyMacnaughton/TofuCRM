@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   resources :sessions
   resources :password_resets
 
-
   get 'dashboard', to: 'dashboard#index', as: 'dashboard'
   resources :dashboard
 end
