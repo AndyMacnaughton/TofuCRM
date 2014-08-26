@@ -1,17 +1,8 @@
 body
   .container
-    header
-      ul class="left"
-        a href=root_url
-          h1 Tofu
-
-      ul class="right"
-        a href="#"
-          h3
-            ' Hi
-            = current_username
 
     aside
+      .brand = link_to 'tofu', root_url
       nav
         ul
           li
@@ -28,3 +19,9 @@ body
             a href="#" Calendar
 
     #content
+      header
+        ul class="right"
+          a href="#"
+            h3
+              ' Hi
+              = current_username

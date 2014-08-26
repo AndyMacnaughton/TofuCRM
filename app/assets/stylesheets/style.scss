@@ -3,7 +3,7 @@
 html, body {
   font-family: $font-primary;
   height: 100%;
-  background-color: #efeff4;
+  background-color: $body-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,12 +52,12 @@ header {
   border-bottom: solid $header-border-width $header-border-color;
   background-color: $header-background-color;
   color: $font-primary-color;
-  height: 50px;
+  height: $header-height;
   position: relative;
 
   ul {
-    width: auto;
-    height: auto !important;
+    padding: 0px;
+    margin: 0;
     display: inline;
   }
 
@@ -66,13 +66,12 @@ header {
   }
 
   .left {
-    float: left !important;
     margin-left: 50px;
     text-transform: uppercase;
   }
 
   .right {
-    float: right !important;
+    float: right;
     margin-right: 50px;
   }
 
@@ -84,29 +83,44 @@ aside {
   background-color: $aside-background-color;
   width: $aside-width;
   height: 100%;
-  float: left;
-  display: block;
-  position:fixed;
-}
+  position: absolute;
+  left: 0;
+  top: 0;
 
-nav {
-  margin-top: 20px;
-  text-transform: uppercase;
-
-  ul li a {
-    line-height: 4em;
-    margin-left: 50px;
-    font-size: 70%;
+  .brand {
+    height: $header-height;
+    line-height: $header-height;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 24px;
+    a {
+      color: $aside-link-color;
+    }
   }
 
+  nav {
+    margin-top: 20px;
+    text-transform: uppercase;
+
+    ul li {
+      list-style: none;
+    }
+
+    ul li a {
+      line-height: 5em;
+      font-size: 70%;
+      color: $aside-link-color;
+    }
+  }
 }
+
 
 // Main Content
 
 #content {
-  float:left;
-  position: relative;
-  margin-left: 15%;
+  margin-left: $content-width;
+  min-width: 276px;
+  display: block;
 }
 
 footer {

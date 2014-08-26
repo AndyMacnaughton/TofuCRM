@@ -1,0 +1,31 @@
+.wrapper
+  = form_for @user do |f|
+
+    h1 Sign Up
+    - if @user.errors.any?
+      .error_messages
+        h2 Whoops! We found an error!
+        ul
+          - for message in @user.errors.full_messages
+            li = message
+
+    .field
+      = f.email_field :email, :placeholder => "Email", :required => true
+
+    .field
+      = f.text_field :forename, :placeholder => "First Name", :required => true
+
+    .field
+      = f.text_field :surname, :placeholder => "Last Name", :required => true
+
+    .field
+      = f.password_field :password, :placeholder => "Password"
+
+    .field
+      = f.password_field :password_confirmation, :placeholder => "Password Confirmation"
+
+    .field
+      = f.collection_select :subscription_id, Subscription.all, :id, :name
+
+    .actions
+      = f.submit
