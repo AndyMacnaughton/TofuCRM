@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
   def new
+    if !current_user.nil?
+      redirect_to dashboard_path
+    end
   end
 
   def create

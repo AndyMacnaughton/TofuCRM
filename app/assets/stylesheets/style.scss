@@ -93,9 +93,15 @@ aside {
     text-transform: uppercase;
     text-align: center;
     font-size: 24px;
-    a {
-      color: $aside-link-color;
+
+    li {
+      padding-left: 20px;
+
+      a {
+        color: $aside-link-color;
+      }
     }
+
   }
 
   nav {
@@ -104,12 +110,12 @@ aside {
 
     ul li {
       list-style: none;
-    }
 
-    ul li a {
-      line-height: 5em;
-      font-size: 70%;
-      color: $aside-link-color;
+      a {
+        line-height: 5em;
+        font-size: 70%;
+        color: $aside-link-color;
+      }
     }
   }
 }
@@ -137,10 +143,20 @@ footer {
   max-width: 400px;
 }
 
-.login-content {
+.login-content, .site-content {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
+}
+
+.site-content {
+  a {
+    display: block;
+  }
+
+  a:hover {
+    color: #17C97E
+  }
 }
 
 .input {

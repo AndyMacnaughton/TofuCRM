@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    title Tofu
+
+    = stylesheet_link_tag    "application", :media => "all", 'data-turbolinks-track' => true
+    = javascript_include_tag "application", 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  body
+    .container
+
+      aside
+        .brand = link_to 'tofu', root_url
+        nav
+          ul
+            li
+              a href="#" Home
+            li
+              a href="#" To Do
+            li
+              a href="#" Contacts
+            li
+              a href="#" Leads
+            li
+              a href="#" Emails
+            li
+              a href="#" Calendar
+
+      #content
+        header
+          ul class="right"
+            a href="#"
+              h3
+                = current_username
+
+      = yield
