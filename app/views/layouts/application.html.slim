@@ -29,7 +29,14 @@ html
 
       #content
         header
-          ul class="right"
+          .left.table
+             form.header-form action="#" method="get"
+              .icon-over-input
+                input class="form-control" autocomplete="off" name="q" placeholder="Search for deals, contacts, companies... anything!" type="text" value=""
+                = icon ('search')
+
+
+          ul.right
             a href="#"
               h3
                 = current_username

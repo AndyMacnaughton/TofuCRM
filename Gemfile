@@ -40,3 +40,6 @@ group :production, :staging do
 end
 
 gem 'cancancan', '~> 1.9'
+
+# fonts
+gem 'font-awesome-sass', '~> 4.2.0'
